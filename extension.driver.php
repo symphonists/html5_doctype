@@ -6,7 +6,7 @@
 			return array(
 				'name' => 'HTML5 doctype',
 				'description' => 'Replace XHTML doctype with basic HTML5 doctype',
-				'version' => '1.1',
+				'version' => '1.2',
 				'release-date' => '2010-11-10',
 				'author' => array(
 					'name' => 'Nick Dunn'
