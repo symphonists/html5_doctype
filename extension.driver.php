@@ -27,8 +27,8 @@
 		public function parse_html($context) {
 			$html = $context['output'];
 			$html = preg_replace("/<!DOCTYPE [^>]+>/", "<!DOCTYPE html>", $html);
-			$html = preg_replace("/<html [^>]+>/", "<html lang=\"en\">", $html);
-			$html = preg_replace("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />", "meta charset=\"utf-8\" /", $html);
+			$html = preg_replace('/(<html ).*(lang=\"[a-z]+\").*>/i', '\\1\\2>', $html);
+			$html = preg_replace('<meta http-equiv=\"Content-Type\" content=\"text/html; charset=(.*[a-z0-9-])\" />', 'meta charset="\\1" /', $html);
 			$context['output'] = $html;
 		}
 
