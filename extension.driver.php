@@ -6,7 +6,7 @@
 			return array(
 				'name' => 'HTML5 doctype',
 				'description' => 'Replace XHTML doctype with basic HTML5 doctype',
-				'version' => '1.2',
+				'version' => '1.2.1',
 				'release-date' => '2010-11-10',
 				'author' => array(
 					'name' => 'Nick Dunn'
@@ -28,7 +28,7 @@
 			$html = $context['output'];
 			$html = preg_replace("/<!DOCTYPE [^>]+>/", "<!DOCTYPE html>", $html);
 			$html = preg_replace('/(<html ).*(lang=\"[a-z]+\").*>/i', '\\1\\2>', $html);
-			$html = preg_replace('<meta http-equiv=\"Content-Type\" content=\"text/html; charset=(.*[a-z0-9-])\" />', 'meta charset="\\1" /', $html);
+			$html = preg_replace('/<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=(.*[a-z0-9-])\" \/>/i', '<meta charset="\\1" />', $html);
 			$context['output'] = $html;
 		}
 
