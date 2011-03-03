@@ -2,7 +2,7 @@
 
 This is an extension for [Symphony 2](http://symphony-cms.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.2.3
+- Version: 1.2.4
 - Date: 3rd March 2011
 - Requirements: Symphony 2
 - Author: Nick Dunn
@@ -56,6 +56,10 @@ Information about [installing and updating extensions](http://symphony-cms.com/l
 
 
 ## Change Log
+
+**Version 1.2.4**
+
+- Simplify regex to only remove XHTML xmlns attribute and xml:lang namespace. This will preserve any other attributes, including classes on the html element.
 
 **Version 1.2.3**
 
