@@ -6,8 +6,8 @@
 			return array(
 				'name' => 'HTML5 doctype',
 				'description' => 'Replace XHTML syntax with basic HTML5 syntax.',
-				'version' => '1.2.2',
-				'release-date' => '2010-11-11',
+				'version' => '1.2.3',
+				'release-date' => '2011-03-03',
 				'author' => array(
 					'name' => 'Nick Dunn'
 				)
