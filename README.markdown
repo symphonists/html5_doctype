@@ -4,7 +4,7 @@ This is an extension for [Symphony 2](http://symphony-cms.com/): A cludge to enf
 
 - Version: 1.2.3
 - Date: 3rd March 2011
-- Requirements: Symphony 2.0.7+
+- Requirements: Symphony 2
 - Author: Nick Dunn
 - Constributors: Stephen Bau, Michael Eichelsdoerfer
 - GitHub Repository: <https://github.com/domain7/html5_doctype>
