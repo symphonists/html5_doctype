@@ -6,10 +6,17 @@
 			return array(
 				'name' => 'HTML5 doctype',
 				'type'	=> 'output',
-				'version' => '1.2.4',
+				'version' => '1.2.5',
 				'release-date' => '2011-03-03',
 				'author' => array(
-					'name' => 'Nick Dunn'
+					array(
+						'name' => 'Nick Dunn'
+					),
+					array(
+						'name' => 'Stephen Bau',
+						'website' => 'http://domain7.com',
+						'email' => 'stephen@domain7.com'
+					)
 				),
 				'description' => 'Replace XHTML syntax with basic HTML5 syntax.',
 				'compatibility' => array(

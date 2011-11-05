@@ -66,6 +66,12 @@ Information about [installing and updating extensions](http://symphony-cms.com/l
 
 ## Change Log
 
+**Version 1.2.5**
+
+- Increase number of lines that are parsed from 5 to 15 to accommodate conditional classes
+- Add instructions for adding Paul Irish's conditional classes
+- Add a credit for contributions by Stephen Bau to the extension driver's `about` array
+
 **Version 1.2.4**
 
 - Simplify regex to only remove XHTML xmlns attribute and xml:lang namespace. This will preserve any other attributes, including classes on the html element.
