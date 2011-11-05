@@ -2,8 +2,8 @@
 
 This is an extension for [Symphony 2](http://symphony-cms.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.2.4
-- Date: 3rd March 2011
+- Version: 1.2.5
+- Date: 5 November 2011
 - Requirements: Symphony 2
 - Author: Nick Dunn
 - Constributors: Stephen Bau, Michael Eichelsdoerfer
@@ -30,11 +30,11 @@ Regular expressions are used to parse only the first 4 lines of the output. That
 
 ### XSL Comments
 
-If XSL comments are added to the beginning of the document, it would be necessary to increase the number of lines of text being processed by the regex. In this case, because the `limit` argument is set to a value of `5`, the `explode` function returns an array of five strings: the first four elements of the array contain each of the first four lines of the HTML output, and the last element contains the rest of the HTML output.
+If XSL comments are added to the beginning of the document, it would be necessary to increase the number of lines of text being processed by the regex. In this case, because the `limit` argument is set to a value of `15`, the `explode` function returns an array of five strings: the first fourteen elements of the array contain each of the first fourteen lines of the HTML output, and the last element contains the rest of the HTML output.
 
-If you wanted to add a couple lines of comments at the beginning of the document, you could accommodate this by increasing the value of the `limit` argument for the explode function. For example, increase the `limit` to `10`.
+If you wanted to adjust the number of lines at the beginning of the document which need to be parsed, you could accommodate this by modifying the value of the `limit` argument for the explode function. For example, reduce the `limit` to `5` to parse only the first four lines.
 
-     $html_array = explode("n", $html, 10);
+     $html_array = explode("n", $html, 5);
 
 ### XML Namespace
 
