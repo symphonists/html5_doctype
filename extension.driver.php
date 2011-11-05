@@ -37,7 +37,7 @@
 				// Split the HTML output into two variables:
 				// $html_doctype contains the first four lines of the HTML document
 				// $html_doc contains the rest of the HTML document
-				$html_array = explode("\n", $html, 5);
+				$html_array = explode("\n", $html, 15);
 				$html_doc = array_pop($html_array);
 				$html_doctype = implode("\n", $html_array);
 
