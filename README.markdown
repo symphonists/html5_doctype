@@ -42,6 +42,15 @@ To preserve the XML namespace declaration on the HTML element, comment out this 
 
      // $html_doctype = preg_replace('/(<html ).*(lang="[a-z]+").*>/i', '\1\2>', $html_doctype);
 
+### Conditional Classes
+
+Because the extension now parses more lines at the beginning of the document, it is now possible to integrate code such as [Paul Irish's conditional classes](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/). Add the following code:
+
+	<xsl:comment> paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ </xsl:comment>
+	<xsl:comment><![CDATA[[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 
 ### Possible Future Feature: Preferences Page
 
