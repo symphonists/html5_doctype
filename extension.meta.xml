@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="html5_doctype">
+<extension id="html5_doctype" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>HTML5 Doctype</name>
 	<description>Convert XHTML to HTML5</description>
 	<repo type="github">https://github.com/domain7/html5_doctype</repo>
