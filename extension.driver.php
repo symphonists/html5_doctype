@@ -6,7 +6,7 @@
 			return array(
 				'name' => 'HTML5 doctype',
 				'type'	=> 'output',
-				'version' => '1.2.5',
+				'version' => '1.2.6',
 				'release-date' => '2011-03-03',
 				'author' => array(
 					array(
@@ -20,6 +20,7 @@
 				),
 				'description' => 'Replace XHTML syntax with basic HTML5 syntax.',
 				'compatibility' => array(
+					'2.3' => true,
 					'2.1.2' => true,
 					'2.2' => true
 				)

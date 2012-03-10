@@ -2,8 +2,8 @@
 
 This is an extension for [Symphony 2](http://symphony-cms.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.2.5
-- Date: 5 November 2011
+- Version: 1.2.6
+- Date: 10 March 2012
 - Requirements: Symphony 2
 - Author: Nick Dunn
 - Constributors: Stephen Bau, Michael Eichelsdoerfer
@@ -65,6 +65,10 @@ Information about [installing and updating extensions](http://symphony-cms.com/l
 
 
 ## Change Log
+
+**Version 1.2.6**
+
+- Compatibility update for Symphony 2.3: Add extension.meta.xml file
 
 **Version 1.2.5**
 
