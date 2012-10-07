@@ -2,7 +2,7 @@
 
 This is an extension for [Symphony 2](http://getsymphony.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.2.7
+- Version: 1.3
 - Date: 7 October 2012
 - Requirements: Symphony 2
 - Author: Nick Dunn
