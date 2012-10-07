@@ -89,7 +89,7 @@
 				$html = $context['output'];
 
 				// Split the HTML output into two variables:
-				// $html_doctype contains the first four lines of the HTML document
+				// $html_doctype contains the first fifteen lines of the HTML document
 				// $html_doc contains the rest of the HTML document
 				$html_array = explode("\n", $html, 15);
 				$html_doc = array_pop($html_array);
