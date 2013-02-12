@@ -14,6 +14,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.3.1" date="2013-02-11" min="2.3">
+			- Add Russian language translation
+		</release>
 		<release version="1.3" date="2012-10-07" min="2.3">
 			- Modified the regexp so the meta charset is replaced regardless of XSL output method (mlathrom)
 			- Enable configuration setting to exclude page types from being processed with HTML5 doctype (iwyg)
