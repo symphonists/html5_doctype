@@ -2,15 +2,15 @@
 <extension id="html5_doctype" xmlns="http://getsymphony.com/schemas/extension/1.0">
 	<name>HTML5 Doctype</name>
 	<description>Convert XHTML to HTML5</description>
-	<repo type="github">https://github.com/domain7/html5_doctype</repo>
+	<repo type="github">https://github.com/symphonists/html5_doctype</repo>
 	<url type="discuss">http://getsymphony.com/discuss/thread/79978/</url>
 	<types>
 		<type>Other</type>
 	</types>
 	<authors>
 		<author>
-			<name github="domain7" symphony="bauhouse">Stephen Bau</name>
-			<website>http://domain7.com/</website>
+			<name github="bauhouse" symphony="bauhouse">Stephen Bau</name>
+			<website>http://stephenbau.com/</website>
 		</author>
 	</authors>
 	<releases>
