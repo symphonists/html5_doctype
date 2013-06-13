@@ -18,12 +18,16 @@
                     'delegate' => 'FrontendPageResolved',
                     'callback' => 'setRenderTrigger'
 				),
-
 				array(
 					'page' => '/system/preferences/',
                     'delegate' => 'AddCustomPreferenceFieldsets',
                     'callback' => 'appendPreferences'
 				),
+				array(
+					'page' => '/system/preferences/',
+					'delegate' => 'Save',
+					'callback' => '__SavePreferences'
+				)
 			);
         }
 
@@ -57,6 +61,14 @@
             $fieldset->appendChild($div);
 
             $context['wrapper']->appendChild($fieldset);
+
+			// checkbox to use XHTML5 namespace attributes
+			$label = Widget::Label();
+			$input = Widget::Input('settings[html5_doctype][use_xhtml5]', 'yes', 'checkbox');
+			if(Symphony::Configuration()->get('use_xhtml5', 'html5_doctype') == 'yes') $input->setAttribute('checked', 'checked');
+			$label->setValue($input->generate() . ' ' . __('Use XHTML5 (include namespace attributes on <code>html</code> element)'));
+            $fieldset->appendChild($label);
+
         }
 
         public function setRenderTrigger($context)
@@ -97,7 +109,14 @@
 
 				// Parse the doctype to convert XHTML syntax to HTML5
 				$html_doctype = preg_replace("/<!DOCTYPE [^>]+>/", "<!DOCTYPE html>", $html_doctype);
-				$html_doctype = preg_replace('/ xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\"| xml:lang="[^\"]*\"/', '', $html_doctype);
+
+				// Use XHTML5 by default, but if preference is set, include namespace attributes on html element
+				if(Symphony::Configuration()->get('use_xhtml5', 'html5_doctype') == 'yes') {
+					// leave html attributes as is
+				} else {
+					$html_doctype = preg_replace('/ xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\"| xml:lang="[^\"]*\"/', '', $html_doctype);
+				}
+
 				$html_doctype = preg_replace('/<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=(.*[a-z0-9-])\"( \/)?>/i', '<meta charset="\1"\2>', $html_doctype);
 
 				// Concatenate the fragments into a complete HTML5 document
@@ -107,4 +126,16 @@
 			}
 		}
 
+		/**
+		 * Save preferences
+		 *
+		 * @param array $context
+		 *  delegate context
+		 */
+		public function __SavePreferences($context) {
+
+			if(!isset($context['settings']['html5_doctype']['use_xhtml5'])){
+				$context['settings']['html5_doctype']['use_xhtml5'] = 'no';
+			}
+		}
 	}
