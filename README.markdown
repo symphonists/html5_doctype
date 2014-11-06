@@ -2,13 +2,6 @@
 
 This is an extension for [Symphony 2](http://getsymphony.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.3.1
-- Date: 11 February 2013
-- Requirements: Symphony 2
-- Author: Nick Dunn
-- Constributors: Stephen Bau, Michael Eichelsdoerfer
-- GitHub Repository: <https://github.com/domain7/html5_doctype>
-
 
 ## Usage
 
@@ -65,6 +58,10 @@ Information about [installing and updating extensions](http://getsymphony.com/le
 
 
 ## Change Log
+
+**Version 1.3.2**
+
+- Compatibility update for Symphony 2.4: Add 'data-interactive' attribute to tag field in preferences
 
 **Version 1.3.1**
 
