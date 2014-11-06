@@ -42,7 +42,7 @@
                     Symphony::Configuration()->get('exclude_pagetypes', 'html5_doctype')
                 ));
 
-            $tags = new XMLElement('ul', null, array('class' => 'tags'));
+            $tags = new XMLElement('ul', null, array('class' => 'tags', 'data-interactive' => 'data-interactive'));
 
 			$types = PageManager::fetchAvailablePageTypes();
 
