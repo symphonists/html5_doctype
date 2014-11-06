@@ -2,13 +2,6 @@
 
 This is an extension for [Symphony 2](http://getsymphony.com/): A cludge to enforce a basic HTML5 doctype regardless of your XSLT output.
 
-- Version: 1.3.2
-- Date: 11 February 2013
-- Requirements: Symphony 2
-- Author: Nick Dunn
-- Constributors: Stephen Bau, Michael Eichelsdoerfer
-- GitHub Repository: <https://github.com/domain7/html5_doctype>
-
 
 ## Usage
 
