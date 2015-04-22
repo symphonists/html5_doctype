@@ -59,6 +59,11 @@ Information about [installing and updating extensions](http://getsymphony.com/le
 
 ## Change Log
 
+**Version 1.3.3**
+
+- Doctype now lowercase as per [H5BP](https://github.com/h5bp/html5-boilerplate) template.
+- Added Slovak translation
+
 **Version 1.3.2**
 
 - Compatibility update for Symphony 2.4: Add 'data-interactive' attribute to tag field in preferences
