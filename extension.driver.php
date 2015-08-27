@@ -96,7 +96,7 @@
                 $html_doctype = implode("\n", $html_array);
 
                 // Parse the doctype to convert XHTML syntax to HTML5
-                $html_doctype = preg_replace("/<!DOCTYPE [^>]+>/", "<!DOCTYPE html>", $html_doctype);
+                $html_doctype = preg_replace("/<!DOCTYPE [^>]+>/", "<!doctype html>", $html_doctype);
                 $html_doctype = preg_replace('/ xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\"| xml:lang="[^\"]*\"/', '', $html_doctype);
                 $html_doctype = preg_replace('/<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=(.*[a-z0-9-])\"( \/)?>/i', '<meta charset="\1"\2>', $html_doctype);
 
