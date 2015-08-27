@@ -25,9 +25,9 @@ Regular expressions are used to parse only the first 4 lines of the output. That
 
 If XSL comments are added to the beginning of the document, it would be necessary to increase the number of lines of text being processed by the regex. In this case, because the `limit` argument is set to a value of `15`, the `explode` function returns an array of five strings: the first fourteen elements of the array contain each of the first fourteen lines of the HTML output, and the last element contains the rest of the HTML output.
 
-If you wanted to adjust the number of lines at the beginning of the document which need to be parsed, you could accommodate this by modifying the value of the `limit` argument for the explode function. For example, reduce the `limit` to `5` to parse only the first four lines.
+To adjust the number of lines at the beginning of the document which are parsed, modify the value of the `limit` argument for the explode function. For example, to reduce the `limit` to `5` to parse only the first four lines:
 
-     $html_array = explode("n", $html, 5);
+     $html_array = explode("\n", $html, 5);
 
 ### XML Namespace
 
