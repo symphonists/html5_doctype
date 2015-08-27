@@ -8,19 +8,19 @@ This is an extension for [Symphony 2](http://getsymphony.com/): A cludge to enfo
 Enable the extension to replace XHTML syntax with basic HTML5 syntax. What it actually does is parse any HTML output after XSLT processing to swap out the first four lines of the HTML output. For example, the following XHTML doctype:
 
 ```html
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	  <head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
 
 is replaced with an HTML5 doctype:
 
 ```html
-	<!DOCTYPE html>
-	<html lang="en">
-	  <head>
-	    <meta charset="UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 ```
 
 Regular expressions are used to parse only the first 4 lines of the output. That way, the script will not parse any code examples contained within the document and the regex processing will be confined to the string fragment that needs to be modified.
@@ -40,18 +40,20 @@ To adjust the number of lines at the beginning of the document which are parsed,
 To preserve the XML namespace declaration on the HTML element, comment out this line:
 
 ```php
-     // $html_doctype = preg_replace('/(<html ).*(lang="[a-z]+").*>/i', '\1\2>', $html_doctype);
+// $html_doctype = preg_replace('/(<html ).*(lang="[a-z]+").*>/i', '\1\2>', $html_doctype);
 ```
 
 ### Conditional Classes
 
 Because the extension now parses more lines at the beginning of the document, it is now possible to integrate code such as [Paul Irish's conditional classes](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/). Add the following code:
 
-	<xsl:comment> paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ </xsl:comment>
-	<xsl:comment><![CDATA[[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
+```xslt
+<xsl:comment> paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ </xsl:comment>
+<xsl:comment><![CDATA[[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
+```
 
 ### Possible Future Feature: Preferences Page
 
