@@ -32,7 +32,7 @@ If XSL comments are added to the beginning of the document, it would be necessar
 To adjust the number of lines at the beginning of the document which are parsed, modify the value of the `limit` argument for the explode function. For example, to reduce the `limit` to `5` to parse only the first four lines:
 
 ```php
-     $html_array = explode("\n", $html, 5);
+$html_array = explode("\n", $html, 5);
 ```
 
 ### XML Namespace
