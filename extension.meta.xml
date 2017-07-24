@@ -3,7 +3,7 @@
 	<name>HTML5 Doctype</name>
 	<description>Convert XHTML to HTML5</description>
 	<repo type="github">https://github.com/symphonists/html5_doctype</repo>
-	<url type="discuss">http://getsymphony.com/discuss/thread/79978/</url>
+	<url type="discuss">https://www.getsymphony.com/discuss/thread/79978/</url>
 	<types>
 		<type>Other</type>
 	</types>
@@ -17,6 +17,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.3.5" date="2017-07-24" min="2.3" max="2.x.x">
+			- Fixed Symphony 2.x compat
+		</release>
 		<release version="1.3.4" date="2015-04-28" min="2.3" max="2.6.x">
 			- Fixed 1.3.3 release notes
 		</release>
